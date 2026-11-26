@@ -1,0 +1,111 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marks Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Student Marks Calculator</h1>
+
+        <form id="marksForm">
+
+            <label class="bold">Name</label>
+            <input type="text" id="studentName"
+                   placeholder="Enter student name" required>
+
+            <p>Gender</p>
+
+            <div class="options">
+                <label>
+                    <input type="radio" name="gender" value="Male" required>
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="Female">
+                    Female
+                </label>
+            </div>
+
+            <p>Course</p>
+
+            <div class="options">
+                <label>
+                    <input type="checkbox" name="course" value="HNDIT">
+                    HNDIT
+                </label>
+
+                <label>
+                    <input type="checkbox" name="course" value="HNDSE">
+                    HNDSE
+                </label>
+
+                <label>
+                    <input type="checkbox" name="course" value="HNDJA">
+                    HNDJA
+                </label>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks (0–100)</th>
+                        <th>Grade</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Machine Learning</td>
+                        <td>
+                            <input type="number" class="marks"
+                                   min="0" max="100" required>
+                        </td>
+                        <td class="grade">-</td>
+                    </tr>
+
+                    <tr>
+                        <td>Computer Network</td>
+                        <td>
+                            <input type="number" class="marks"
+                                   min="0" max="100" required>
+                        </td>
+                        <td class="grade">-</td>
+                    </tr>
+
+                    <tr>
+                        <td>Architecture</td>
+                        <td>
+                            <input type="number" class="marks"
+                                   min="0" max="100" required>
+                        </td>
+                        <td class="grade">-</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <th colspan="2">Average</th>
+                        <th id="average">-</th>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <button type="submit">Calculate</button>
+
+            <div id="result"></div>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
